@@ -23,13 +23,6 @@ terraform {
   }
 }
 
-data "terraform_remote_state" "s3_bucket" {
-  backend = "local"
-  config = {
-    path = "../TF_s3"
-  }
-}
-
 provider "yandex" {
   service_account_key_file = file("~/authorized_key.json")
   cloud_id                 = var.cloud_id
