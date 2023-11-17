@@ -36,8 +36,8 @@ resource "yandex_vpc_network" "main_network" {
 }
 
 # Создание целевой группы
-resource "yandex_lb_target_group" "tg-sf" {
-  name      = "tg-sf"
+resource "yandex_lb_target_group" "tg_sf" {
+  name      = "tg_sf"
   region_id = "ru-central1"
 
   target {
@@ -52,10 +52,10 @@ resource "yandex_lb_target_group" "tg-sf" {
 }
 
 # Содание балансировщика нагрузки
-resource "yandex_lb_network_load_balancer" "lb-sf" {
+resource "yandex_lb_network_load_balancer" "lb_sf" {
 
   listener {
-    name = "ln-sf1"
+    name = "ln_sf1"
     port = 80
     external_address_spec {
       ip_version = "ipv4"
