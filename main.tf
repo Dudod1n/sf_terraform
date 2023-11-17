@@ -13,12 +13,20 @@ terraform {
 
   # Размещение state файла в S3 хранилище
   backend "s3" {
-    endpoint                    = "storage.yandexcloud.net"
-    bucket                      = "dudu-tf-bucket"
-    region                      = "ru-central1-a"
-    key                         = "dev/lemp.tfstate"
+    endpoint = "storage.yandexcloud.net"
+    bucket   = "dudu-tf-bucket"
+    region   = "ru-central1-a"
+    key      = "dev/lemp.tfstate"
+
     skip_region_validation      = true
     skip_credentials_validation = true
+  }
+}
+
+data "terraform_remote_state" "s3_bucket" {
+  backend = "local"
+  config = {
+    path = "../TF_s3"
   }
 }
 
