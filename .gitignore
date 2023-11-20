@@ -1,6 +1,6 @@
 *key.json
 *lock.hcl
-
+.pre-commit-config*
 # Local .terraform directories
 **/.terraform/*
 
