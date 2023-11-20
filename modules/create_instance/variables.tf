@@ -1,15 +1,3 @@
-variable "cloud_id" {
-  type        = string
-  default     = "b1ghohslr95nkotg5vom"
-  description = "Default yandex cloud id in Ya.Cloud"
-}
-
-variable "folder_id" {
-  type        = string
-  default     = "b1gcpvio7cegc9qadr8g"
-  description = "Default yandex folder id"
-}
-
 variable "ssh_key_server" {
   type    = string
   default = null
