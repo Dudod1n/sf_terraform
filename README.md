@@ -7,7 +7,8 @@
     1. Целевая группа с ВМ из пункта 2.
     2. Обработчик запросов с публичным IP адресом
     3. Проверки доступности целевых групп по порту 80
-    
+
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
 | Name | Version |
@@ -32,8 +33,8 @@
 
 | Name | Type |
 |------|------|
-| [yandex_lb_network_load_balancer.lb-sf](https://registry.terraform.io/providers/yandex-cloud/yandex/0.100.0/docs/resources/lb_network_load_balancer) | resource |
-| [yandex_lb_target_group.tg-sf](https://registry.terraform.io/providers/yandex-cloud/yandex/0.100.0/docs/resources/lb_target_group) | resource |
+| [yandex_lb_network_load_balancer.lb_sf](https://registry.terraform.io/providers/yandex-cloud/yandex/0.100.0/docs/resources/lb_network_load_balancer) | resource |
+| [yandex_lb_target_group.tg_sf](https://registry.terraform.io/providers/yandex-cloud/yandex/0.100.0/docs/resources/lb_target_group) | resource |
 | [yandex_vpc_network.main_network](https://registry.terraform.io/providers/yandex-cloud/yandex/0.100.0/docs/resources/vpc_network) | resource |
 
 ## Inputs
@@ -52,3 +53,4 @@
 | <a name="output_external_ip_address_server2"></a> [external\_ip\_address\_server2](#output\_external\_ip\_address\_server2) | An assigned external IP address if the instance server-lemp |
 | <a name="output_internal_ip_address_server1"></a> [internal\_ip\_address\_server1](#output\_internal\_ip\_address\_server1) | An internal IP address of the instance server-lemp |
 | <a name="output_internal_ip_address_server2"></a> [internal\_ip\_address\_server2](#output\_internal\_ip\_address\_server2) | An internal IP address of the instance server-lemp |
+<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->   
