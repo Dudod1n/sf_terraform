@@ -63,7 +63,7 @@ resource "yandex_lb_network_load_balancer" "lb_sf" {
   }
 
   attached_target_group {
-    target_group_id = yandex_lb_target_group.tg-sf.id
+    target_group_id = yandex_lb_target_group.tg_sf.id
     healthcheck {
       name = "http"
       http_options {
@@ -82,7 +82,7 @@ module "create_server1" {
   os_family_name  = "lemp"
   zone            = "a"
   cidr_blocks     = "10.0.1.0/28"
-  ssh_key_server  = "ubuntu:${file("~/.ssh/yan-cloud-sf.pub")}"
+  ssh_key_server  = "ubuntu:${file("~/.ssh/dudu_yan.pub")}"
 
 }
 
@@ -94,7 +94,7 @@ module "create_server2" {
   os_family_name  = "lamp"
   zone            = "b"
   cidr_blocks     = "10.0.2.0/28"
-  ssh_key_server  = "ubuntu:${file("~/.ssh/yan-cloud-sf.pub")}"
+  ssh_key_server  = "ubuntu:${file("~/.ssh/dudu_yan.pub")}"
 
 }
 
